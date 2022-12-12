@@ -31,9 +31,9 @@
             name="description"
             rows="5"
             wrap="hard"
-            readonly>
-            {{$player -> description}}
-        </textarea>
+            readonly>{{$player -> description}}</textarea>
+            
+        
     </div>
     <h4 class="mt-3">Retired?</h4>
     <div class="form-check">
