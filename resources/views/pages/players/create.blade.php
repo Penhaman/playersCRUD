@@ -11,7 +11,7 @@
         <div class="row mt-5">
             <div class="col-9 ml-5">
                 <h1>Add player</h1>
-                @component('components.players.players-form-create')
+                @component('components.players.player-form-create')
                 @endcomponent
                
             </div>

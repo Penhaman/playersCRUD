@@ -37,17 +37,14 @@
     </div>
     <h4 class="mt-3">Retired?</h4>
     <div class="form-check">
-        <div class="custom-control custom-radio custom-control-inline">
-            <input class="custom-control-input" type="radio" name="retired" id="retired" value="0" disabled {{ $player->retired=="0" ? "checked":"" }}>
-            <label class="custom-control-label" for="retired">
+            <input class="form-check-input" type="radio" name="retired" id="retired" value="0" disabled {{ $player->retired=="0" ? "checked":"" }}>
+            <label class="form-check-label" for="retired">
             Yes
             </label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-            <input class="custom-control-input" type="radio" name="retired" id="retired" value="1" disabled {{ $player->retired=="1" ? "checked":"" }}>
-            <label class="custom-control-label" for="retired">
+            <br>
+            <input class="form-check-input" type="radio" name="retired" id="retired" value="1" disabled {{ $player->retired=="1" ? "checked":"" }}>
+            <label class="form-check-label" for="retired">
             No
             </label>
-        </div>
     </div>
 </form>

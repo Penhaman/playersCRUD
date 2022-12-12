@@ -29,7 +29,7 @@
             </thead>
             <tbody>
                 @foreach ($players as $player)
-                    @component('components.players.players-list', ['player' => $player])
+                    @component('components.players.player-list', ['player' => $player])
                     @endcomponent
                 @endforeach    
             </tbody>
