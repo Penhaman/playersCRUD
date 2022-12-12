@@ -17,7 +17,6 @@
       </button>
     </div>
   @endif
-
         <table class="table table-striped table-bordered mt-3">
             <thead>
               <tr>
