@@ -12950,3 +12950,7 @@ a.text-dark:focus {
   }
 }
 
+textarea {
+  resize: none;
+}
+

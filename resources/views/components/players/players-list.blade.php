@@ -9,9 +9,22 @@
             <i class="bi bi-emoji-frown-fill" style="color: red"></i> 
         @endif
     </td>
-    <td>
-        <button type="button" class="btn btn-success btn-sm" href="{{ url('players/show/{$player->id}') }}">Show</button>
-        <button type="button" class="btn btn-primary btn-sm" href="{{ url('players/edit/{$player->id}') }}">Edit</button>
-        <button type="button" class="btn btn-danger btn-sm" href="{{ url('players/delete/{$player->id}') }}">Delete</button>
+    <td class="form-inline">
+        <!-- Button para mostrar player com ID -->
+        <div class="pr-1">
+            <a href="{{url('players/' . $player->id)}}" type="button"
+            class="btn btn-success btn-sm">Show</a>
+        </div>
+        <!-- Button para editar player com ID -->
+        <div class="pr-1">
+            <a href="{{url('players/' . $player->id . '/edit')}}" type="button"
+            class="btn btn-primary btn-sm">Edit</a>
+        </div>
+        <!-- Button para apagar o player -->
+        <form action="{{url('players/' . $player->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+        </form>
     </td>
 </tr>

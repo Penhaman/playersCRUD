@@ -8,14 +8,24 @@
 
 @section('content')
 <div class="container">
+  <h1 class="mt-5">Players List</h1>
+  @if (session('status'))
+    <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+      {{ session('status') }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  @endif
+
         <table class="table table-striped table-bordered mt-3">
             <thead>
               <tr>
-                <th scope="col-1">#</th>
-                <th scope="col-2">Name</th>
-                <th scope="col-4">Address</th>
-                <th scope="col-1">Retired</th>
-                <th scope="col-3">Actions </th>
+                <th scope="col-sm-1">#</th>
+                <th scope="col-sm-2">Name</th>
+                <th scope="col-sm-4">Address</th>
+                <th scope="col-sm-1">Retired</th>
+                <th scope="col-sm-3">Actions </th>
               </tr>
             </thead>
             <tbody>

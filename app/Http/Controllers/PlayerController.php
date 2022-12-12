@@ -14,7 +14,7 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $players = Player::all();
+        $players = Player::orderBy('id', 'desc')->get();
         return view('pages.players.index', ['players' => $players]);
     }
 
@@ -38,9 +38,7 @@ class PlayerController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'address' => 'required',
-            'description' => 'required',
-            'retired' => 'required'
+            'address' => 'required'
         ]);
         Player::create($request->all());
 
@@ -55,7 +53,7 @@ class PlayerController extends Controller
      */
     public function show(Player $player)
     {
-        //
+        return view('pages.players.show', ['player' => $player]);
     }
 
     /**
@@ -66,7 +64,7 @@ class PlayerController extends Controller
      */
     public function edit(Player $player)
     {
-        //
+        return view('pages.players.edit', ['player' => $player]);
     }
 
     /**
@@ -78,7 +76,13 @@ class PlayerController extends Controller
      */
     public function update(Request $request, Player $player)
     {
-        //
+        $player = Player::find($player->id);
+        $player->name = $request->name;
+        $player->address = $request->address;
+        $player->description = $request->description;
+        $player->retired = $request->retired;
+        $player->save();
+        return redirect('players')->with('status','Item edited successfully!');
     }
 
     /**
@@ -89,6 +93,7 @@ class PlayerController extends Controller
      */
     public function destroy(Player $player)
     {
-        //
+        $player->delete();
+        return redirect('players')->with('status','Item deleted successfully!');;
     }
 }

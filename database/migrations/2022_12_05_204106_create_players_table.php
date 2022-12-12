@@ -17,9 +17,10 @@ class CreatePlayersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->text('description');
-            $table->boolean('retired');
+            $table->text('description')->nullable();
+            $table->boolean('retired')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +31,8 @@ class CreatePlayersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('players');
+        Schema::table('players', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
     }
 }
