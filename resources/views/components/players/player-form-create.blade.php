@@ -64,8 +64,7 @@
                 name="description"
                 rows="5" 
                 value="{{old('description')}}"
-                placeholder="Type your description..">
-            </textarea>
+                placeholder="Type your description.."></textarea>
         </div>
         <h4 class="mt-3">Retired?</h4>
         <div class="form-check">

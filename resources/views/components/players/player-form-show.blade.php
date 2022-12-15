@@ -1,4 +1,4 @@
-<form class="mt-4">
+<form class="mt-4" action="GET">
     <div class="form-group">
         <h4>Image</h4>
         <a><img class="w-100 h-100 img-responsive" src="{{ asset('storage/'.$player->image) }}" alt="" title=""></a>
@@ -35,8 +35,6 @@
             rows="5"
             wrap="hard"
             readonly>{{$player -> description}}</textarea>
-            
-        
     </div>
     <h4 class="mt-3">Retired?</h4>
     <div class="form-check">
@@ -49,5 +47,9 @@
             <label class="form-check-label" for="retired">
             No
             </label>
+    </div>
+    <div class="pr-1 mt-2">
+        <a href="{{url('players/')}}" type="button"
+        class="btn btn-primary btn-sm">Back</a>
     </div>
 </form>
