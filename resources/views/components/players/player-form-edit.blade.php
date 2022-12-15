@@ -46,12 +46,12 @@
     </div>
     <h4 class="mt-3">Retired?</h4>
     <div class="form-check" required>
-        <input class="form-check-input" type="radio" name="retired" id="retired" value="0" {{ $player->retired=="0" ? "checked":"" }}>
+        <input class="form-check-input" type="radio" name="retired" id="retired" value="0" {{ $player->retired==0 ? "checked":"" }}>
         <label class="form-check-label" for="retired">
           Yes
         </label>
         <br>
-        <input class="form-check-input" type="radio" name="retired" id="retired" value="1" {{ $player->retired=="1" ? "checked":"" }}>
+        <input class="form-check-input" type="radio" name="retired" id="retired" value="1" {{ $player->retired==1 ? "checked":"" }}>
         <label class="form-check-label" for="retired">
           No
         </label>

@@ -1,7 +1,11 @@
 <form class="mt-4" action="GET">
     <div class="form-group">
         <h4>Image</h4>
-        <a><img class="w-100 h-100 img-responsive" src="{{ asset('storage/'.$player->image) }}" alt="" title=""></a>
+        @if(is_null($player->image) )
+            <p>There is no image for <b>{{ $player->name }}</b></p>
+        @else
+            <a><img class="img-thumbnail img-responsive" src="{{ asset('storage/'.$player->image) }}" alt="" title=""></a>
+        @endif
     </div>
     <div class="form-group">
         <h4>Name</h4>
