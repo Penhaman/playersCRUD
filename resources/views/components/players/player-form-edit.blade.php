@@ -1,6 +1,17 @@
-<form class="mt-5" method="POST" action="{{ url('players/' . $player->id) }}">
+<form class="mt-5" method="POST" action="{{ url('players/' . $player->id) }}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
+    <div class="form-group">
+        <h4>Image</h4>
+        <input
+            type="file"
+            id="image"
+            name="image"
+            autocomplete="image"
+            class="form-control"
+            value="{{ $player ->image }}"
+            >
+    </div>
     <div class="form-group">
         <h4>Name</h4>
         <input

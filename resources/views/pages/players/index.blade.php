@@ -20,11 +20,12 @@
         <table class="table table-striped table-bordered mt-3">
             <thead>
               <tr>
-                <th scope="col-sm-1">#</th>
-                <th scope="col-sm-2">Name</th>
-                <th scope="col-sm-4">Address</th>
-                <th scope="col-sm-1">Retired</th>
-                <th scope="col-sm-3">Actions </th>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Retired</th>
+                <th scope="col">Actions </th>
               </tr>
             </thead>
             <tbody>

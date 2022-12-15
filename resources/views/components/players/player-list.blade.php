@@ -1,5 +1,14 @@
 <tr>
     <th scope="row">{{$player -> id}}</th>
+    <td>
+        @if ($player->image)
+            <a><img class="w-100 h-100 img-responsive" src="{{ asset('storage/'.$player->image) }}" alt="" title=""></a>
+        @else
+            <p>
+                No Image
+            </p>
+        @endif
+    </td>
     <td>{{$player -> name}}</td>
     <td>{{$player -> address}}</td>
     <td class="text-center">
